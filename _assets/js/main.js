@@ -28,6 +28,8 @@ createApp({
                 ],
             },
 
+            indexActive: 0,
+
         }
     }
 }).mount('#app')
