@@ -67,5 +67,9 @@ createApp({
                 this.next()
             }, 3000)
         },
+        stopScroll() {
+            clearInterval(this.autoPlay)
+            this.autoPlay = null
+        },
     },
 }).mount('#app')

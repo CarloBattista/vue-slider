@@ -21,7 +21,7 @@
             <!-- Slider Wrapper -->
             <div class="slider-wrapper" tabindex="0">
                 <!-- Item -->
-                <div v-for=" (element,index) in movies.image " v-bind:class="(indexActive == index) ? 'active' : '' " class="item">
+                <div @mouseover="stopScroll" @mouseleave="autoScroll" v-for=" (element,index) in movies.image " v-bind:class="(indexActive == index) ? 'active' : '' " class="item">
                     <img :src="element" :alt="index" />
                     <div class="text">
                         <h3>{{ movies.title[indexActive] }}</h3>
