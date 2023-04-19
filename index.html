@@ -33,7 +33,7 @@
                     <div class="prev"></div>
                     <div class="next"></div>
 
-                    <div v-for=" (element,index) in movies.images " class="thumb">
+                    <div v-for=" (element,index) in movies.images " v-bind:class="(indexActive == index) ? 'active' : '' " class="thumb">
                         <img :src="element" :alt="index" />
                     </div>
                 </div>
