@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
 
+            // Array oggetti
             movies: {
                 title: [
                     "Marvel\'s Spiderman Miles Morale",
@@ -28,8 +29,19 @@ createApp({
                 ],
             },
 
+            // Variabile per index corrente
             indexActive: 0,
 
         }
-    }
+    },
+    methods: {
+        // Al click del button prev ti permette di tornare indietro di 1
+        prev() {
+            if(this.indexActive == 0) {
+                this.indexActive = this.movies.image.length - 1
+            } else {
+                this.indexActive--
+            }
+        },
+    },
 }).mount('#app')
