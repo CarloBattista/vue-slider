@@ -37,10 +37,18 @@ createApp({
     methods: {
         // Al click del button prev ti permette di tornare indietro di 1
         prev() {
-            if(this.indexActive == 0) {
+            if (this.indexActive == 0) {
                 this.indexActive = this.movies.image.length - 1
             } else {
                 this.indexActive--
+            }
+        },
+
+        // Al click del button next ti permette di andare avanti di 1
+        next() {
+            this.indexActive++
+            if (this.indexActive > this.movies.image.length - 1) {
+                this.indexActive = 0
             }
         },
     },
