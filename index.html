@@ -24,8 +24,8 @@
                 <div v-for=" (element,index) in movies.image " v-bind:class="(indexActive == index) ? 'active' : '' " class="item">
                     <img :src="element" :alt="index" />
                     <div class="text">
-                        <h3>{{ movies.title }}</h3>
-                        <p>{{ movies.description }}</p>
+                        <h3>{{ movies.title[indexActive] }}</h3>
+                        <p>{{ movies.description[indexActive] }}</p>
                     </div>
                 </div>
                 <!-- Thumbs -->
