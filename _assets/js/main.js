@@ -32,6 +32,9 @@ createApp({
             // Variabile per index corrente
             indexActive: 0,
 
+            // Variabile per autoScroll
+            autoScroll: null,
+
         }
     },
     methods: {
@@ -52,8 +55,8 @@ createApp({
             }
         },
 
-        changeImage(thumbChange){
+        changeImage(thumbChange) {
             this.indexActive = thumbChange
-        }
+        },
     },
 }).mount('#app')
