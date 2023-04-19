@@ -33,9 +33,12 @@ createApp({
             indexActive: 0,
 
             // Variabile per autoScroll
-            autoScroll: null,
+            autoPlay: null,
 
         }
+    },
+    created() {
+        this.autoScroll()
     },
     methods: {
         // Al click del button prev ti permette di tornare indietro di 1
@@ -57,6 +60,12 @@ createApp({
 
         changeImage(thumbChange) {
             this.indexActive = thumbChange
+        },
+
+        autoScroll() {
+            this.autoPlay = setInterval(() => {
+                this.next()
+            }, 3000)
         },
     },
 }).mount('#app')
