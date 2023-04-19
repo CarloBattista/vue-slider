@@ -30,8 +30,8 @@
                 </div>
                 <!-- Thumbs -->
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="prev"></div>
 
                     <div v-for=" (element,index) in movies.image " v-bind:class="(indexActive == index) ? 'active' : '' " class="thumb">
                         <img :src="element" :alt="index" />
