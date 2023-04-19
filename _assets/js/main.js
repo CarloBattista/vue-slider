@@ -51,5 +51,9 @@ createApp({
                 this.indexActive = 0
             }
         },
+
+        changeImage(thumbChange){
+            this.indexActive = thumbChange
+        }
     },
 }).mount('#app')
