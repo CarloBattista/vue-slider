@@ -21,8 +21,8 @@
             <!-- Slider Wrapper -->
             <div class="slider-wrapper" tabindex="0">
                 <!-- Item -->
-                <div v-for=" (element,index) in movies.images " class="item">
-                    <img v-bind:src="element" v-bind:alt="index" />
+                <div v-for=" (element,index) in movies.images " v-bind:class="(indexActive == index) ? 'active' : '' " class="item">
+                    <img :src="element" :alt="index" />
                     <div class="text">
                         <h3>Title</h3>
                         <p>Description</p>
@@ -34,7 +34,7 @@
                     <div class="next"></div>
 
                     <div v-for=" (element,index) in movies.images " class="thumb">
-                        <img v-bind:src="element" v-bind:alt="index" />
+                        <img :src="element" :alt="index" />
                     </div>
                 </div>
             </div>
